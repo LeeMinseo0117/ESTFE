@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      /* 하지만 width, height, margin, padding, border 와 같은 것은 상속되지 않음 */
+      section {
+        color: red;
+        border: 5px solid pink;
+      }
+      h1,
+      h2,
+      p {
+        border: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <h2>Hello</h2>
+
+    <section>
+      <h1>Hello</h1>
+      <h2>Hello</h2>
+      <p>Hello</p>
+
+      <button>hello</button>
+      <input type="text" value="hello" />
+    </section>
+  </body>
+</html>
