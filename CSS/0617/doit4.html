@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .aspect-ratio1 img,
+      .aspect-ratio2 img {
+        width: 312px;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+      }
+      /* .padding1 {
+        display: inline-block;
+      } */
+      .padding2 {
+        display: inline-block;
+        width: 312px;
+        background-color: darkkhaki;
+      }
+      .parent {
+        background-color: aqua;
+        position: relative;
+        height: 0;
+        padding-top: 50%;
+        /* overflow: hidden; */
+      }
+      .parent img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="aspect-ratio">
+      <div class="aspect-ratio1">
+        <img src="./weniv-binky.png" alt="" />
+        <img src="./weniv-chilli.png" alt="" />
+        <img src="./weniv-garry.png" alt="" />
+      </div>
+      <div class="aspect-ratio2">
+        <img src="./weniv-licat.png" alt="" />
+        <img src="./weniv-suri.png" alt="" />
+        <img src="./weniv-wade.png" alt="" />
+      </div>
+    </div>
+
+    <div class="padding1">
+      <div class="padding2">
+        <div class="parent">
+          <img src="./weniv-binky.png" alt="" />
+        </div>
+        <div class="parent">
+          <img src="./weniv-licat.png" alt="" />
+        </div>
+      </div>
+      <div class="padding2">
+        <div class="parent">
+          <img src="./weniv-chilli.png" alt="" />
+        </div>
+        <div class="parent">
+          <img src="./weniv-suri.png" alt="" />
+        </div>
+      </div>
+      <div class="padding2">
+        <div class="parent">
+          <img src="./weniv-garry.png" alt="" />
+        </div>
+        <div class="parent">
+          <img src="./weniv-wade.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
