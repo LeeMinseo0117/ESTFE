@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .container {
+        background-color: #ddd;
+        display: flex;
+
+        /* 기본값 */
+        /* flex-direction: row; */
+        /* 기본값 + 반대방향 */
+        /* flex-direction: row-reverse; */
+        /* 주측방향 -> 세로 */
+        /* flex-direction: column; */
+
+        /* 주측을 기준으로 정렬하는 속성 */
+        justify-content: center;
+      }
+      .item {
+        background-color: greenyellow;
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">a</div>
+      <div class="item">b</div>
+      <div class="item">c</div>
+      <div class="item">d</div>
+      <div class="item">e</div>
+      <div class="item">f</div>
+      <div class="item">g</div>
+      <div class="item">h</div>
+    </div>
+  </body>
+</html>
