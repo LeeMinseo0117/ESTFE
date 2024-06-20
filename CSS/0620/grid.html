@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .container {
+        display: grid;
+        width: 500px;
+        height: 500px;
+        /* grid-template-columns: 100px 100px 100px; */
+        /* grid-template-rows: 200px 100px; */
+        grid-template-columns: 1fr 1fr 1fr;
+        /* grid-template-rows: 2fr 1fr; */
+        grid-template-rows: repeat(auto-fit, 200px);
+
+        /* grid-template-columns: repeat(3, minmax(100px, 1fr)); */
+
+        /* 빈공간이 생기면서 셀 조절 */
+        /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+
+        grid-template-columns: repeat(auto-fill, 200px);
+
+        /* 빈공간이 생기면 나눠가짐 */
+        /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+
+        gap: 20px;
+
+        align-content: center;
+      }
+      .item {
+        border: 1px solid black;
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item1">item1</div>
+      <div class="item item2">item2</div>
+      <div class="item item3">item3</div>
+      <div class="item item4">item4</div>
+      <!-- <div class="item item5">item5</div>
+      <div class="item item6">item6</div>
+      <div class="item item7">item7</div>
+      <div class="item item8">item8</div>
+      <div class="item item9">item9</div>
+      <div class="item item10">item10</div> -->
+    </div>
+  </body>
+</html>

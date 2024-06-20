@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      /* 전역 변수 */
+      :root {
+        --personal-color: teal;
+      }
+
+      /* 지역 변수 */
+      ul {
+        --second-color: royalblue;
+        /* ul 내에서만 적용 */
+      }
+
+      li {
+        background-color: var(--second-color);
+        /* 적용O */
+      }
+
+      div {
+        background-color: var(--second-color);
+        /* 적용X */
+        border: 5px solid var(--personal-color);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="">1</a></li>
+      <li><a href="">2</a></li>
+      <li><a href="">3</a></li>
+    </ul>
+    <div>hello world</div>
+  </body>
+</html>
