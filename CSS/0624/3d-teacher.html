@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      :root {
+        --translateZ: calc((340px * 7) / 2 / 3.14);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      div {
+        height: 100vh;
+        perspective: 800px;
+      }
+      @keyframes rotate {
+        to {
+          transform: translate(-50%, -50%) rotateY(1turn);
+        }
+      }
+
+      .list-item {
+        position: relative;
+        width: 340px;
+        height: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transform-style: preserve-3d;
+        animation: rotate 10s infinite linear;
+      }
+
+      .list-item li {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .list-item li:nth-child(1) {
+        transform: rotateY(0) translateZ(var(--translateZ));
+      }
+      .list-item li:nth-child(2) {
+        transform: rotateY(calc(360deg / 7)) translateZ(var(--translateZ));
+      }
+      .list-item li:nth-child(3) {
+        transform: rotateY(calc((360deg / 7) * 2)) translateZ(var(--translateZ));
+      }
+      .list-item li:nth-child(4) {
+        transform: rotateY(calc((360deg / 7) * 3)) translateZ(var(--translateZ));
+      }
+      .list-item li:nth-child(5) {
+        transform: rotateY(calc((360deg / 7) * 4)) translateZ(var(--translateZ));
+      }
+      .list-item li:nth-child(6) {
+        transform: rotateY(calc((360deg / 7) * 5)) translateZ(var(--translateZ));
+      }
+      .list-item li:nth-child(7) {
+        transform: rotateY(calc((360deg / 7) * 6)) translateZ(var(--translateZ));
+      }
+      li img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul class="list-item">
+        <li>
+          <img
+            src="https://i.namu.wiki/i/PV52zlADkSKNKXRt858ECK6-D47V17fIQklU0a2KgJe2xIfrrLE8m18OKU6pocyaoQ_R73D_gKIzcEL2bxlu7-eBCMkdNTBZVyZHCMRl-5PPYRaH3-lmE2DEm6SrtE2gv2kEVPix-UeQ_H5Cic3Icw.webp"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+          src=https://i.namu.wiki/i/njXQ6fSmAhEd6ET3g5i12e5cer02HxBHItUtszXtXBwV9oxv0PaBeRicExjxN9AsttbwdSASdyeJuHAK8ACPf4TKM9kCzV6H0PrF13giwrhhfsDQcIjiB6qRQPIFqTnGupcBxEFErrgS3h_Z4teECg.webp
+          alt="" />
+        </li>
+        <li>
+          <img
+            src="https://i.namu.wiki/i/ZSh375AoyvmkrNpE473E5bEHLjrR6XvqG9FPVQREvwTsBffudwmREPJ5WGai5pl3oeJZJkYvUvfTWm6zZmM4-iWdmKLfjBGsM-wa2C4WEYZ1n9A9yigzZYH_A-6FRfQ9WWIpK3dIxARJAzI1WsqhvQ.webp"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://i.namu.wiki/i/iNwN9JWwkA2EE816x7CLg1f3YcrcdnGG4uYFlTzLbis9VaYZZkVtZ23Q69HtfRAwOEbVw269KwejItUB6HQhLNsjIty6XzixHgF-vdskknLe8hS1CkswtbXWnDhw7gxcSHdJGzej4GQK3OpQf04Gyg.webp"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://i.namu.wiki/i/0nH-5CBtEOjg6XgTOXC_qmmEjQ7qG1m0AbKnVXk--3ryR7NlgsHrBJ7n_U6FP9V01KRVs_l7UJ1KNsnMhVekYXBWMYtMz6f5dn1myvCuFKRVv3ySEKK7bYZ0RWjKk-ULO_1w6AOlovFLIaMqwluUbA.webp"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://i.namu.wiki/i/XQb5yGlJg0ggixJzCY0bQGBH6zYZsr9mXb_YS-vUujNhhVpyDlvYsKSTCrmO490AHb_De9WiNyIvm9Ze9kTFJL600E9FFcqEZdD_-3HDaC29gOE8EnkhLZ0TT3r9ZN9BYpAtmrPfRiek-3dsvDfQSA.webp"
+            alt=""
+          />
+        </li>
+        <li>
+          <img
+            src="https://i.namu.wiki/i/XjY5IOt-TF-jHe662QezQS9tQbshQtvmcgced1cyZypvs64X4VZCiW7S8owhqg0ls3ty1ZXKQ1g-BoLr5xb9n0JsXY87wokGC8ph8-GcobgezJS6x4fsnj1CrXaTcDYnTmTlYDOrGjsf2J0bV5e6TA.webp"
+            alt=""
+          />
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

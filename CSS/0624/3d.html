@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      div {
+        perspective: 500px;
+        background-color: yellow;
+        /* display: flex;
+        justify-content: center; */
+        /* perspective-origin: center top; */
+        /* perspective-origin: center bottom; */
+        /* perspective-origin: left center; */
+      }
+      button {
+        width: 150px;
+        height: 100px;
+        background-color: teal;
+        border-radius: 10px;
+        transform: rotateY(30deg);
+      }
+      /* .b1 {
+        transform: perspective(500px) rotateY(45deg);
+      }
+      .b2 {
+        transform: perspective(200px) rotateY(45deg);
+      } */
+      article {
+        width: 100px;
+        height: 50px;
+        background-color: lime;
+        transform: rotateY(130deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button class="b1">this is button</button>
+      <button class="b2">this is button</button>
+      <button><article></article></button>
+      <button>this is button</button>
+      <button>this is button</button>
+    </div>
+  </body>
+</html>

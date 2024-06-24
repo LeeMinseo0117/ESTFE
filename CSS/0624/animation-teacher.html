@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      .container {
+        width: 400px;
+        height: 400px;
+        background-color: royalblue;
+        border-radius: 30%;
+        position: relative;
+      }
+      .container div {
+        width: 10px;
+        height: 150px;
+        position: absolute;
+        top: 200px;
+        left: 200px;
+        transform-origin: center top;
+        /* transform: rotate(45deg); */
+      }
+      .sec {
+        background-color: red;
+        animation: move-watch 60s infinite steps(60);
+      }
+      .min {
+        background-color: green;
+        animation: move-watch 3600s infinite steps(60);
+      }
+      .hour {
+        background-color: black;
+        animation: move-watch 43200s infinite steps(60);
+      }
+      @keyframes move-watch {
+        /* 0% {}
+        100% {} */
+        trom {
+          transform: rotate(0deg);
+          /* transform: rotate(0turn); */
+        }
+        50% {
+          transform: rotate(180deg);
+          /* transform: rotate(180turn); */
+        }
+        to {
+          transform: rotate(360deg);
+          /* transform: rotate(360turn); */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article class="container">
+      <div class="sec"></div>
+      <div class="min"></div>
+      <div class="hour"></div>
+    </article>
+  </body>
+</html>
