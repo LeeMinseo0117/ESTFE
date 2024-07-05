@@ -23,6 +23,8 @@ console.log(fC);
 // fA = 함수 스코프
 
 {
+  // var -> 함수 스코프
+  // let, const -> 블럭 스코프
   var bA = 70;
   let bB = 80;
   const bC = 90;
