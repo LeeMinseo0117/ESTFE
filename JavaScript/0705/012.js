@@ -15,7 +15,6 @@ function func1() {
   console.log("function: ", fA, fA, fC);
 }
 func1();
-console.log("---out");
 console.log(fA);
 console.log(fB);
 console.log(fC);
