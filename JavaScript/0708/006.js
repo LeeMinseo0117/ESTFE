@@ -39,11 +39,12 @@ console.log(str.match(/[0-9]/g)); // 숫자
 // null
 
 const str2 = "Hello weniv!";
+
+console.log("---- substring ----");
+
 // 문자열의 일부를 가져오는 메서드
 // 시작 인덱스 <= x < 종료 인덱스
 // 종료 인덱스 없을 시 마지막까지 출력
-console.log("---- substring ----");
-
 console.log(str2.substring(6));
 console.log(str2.substring(6, str2.length - 1));
 console.log(str2.substring(-3));
@@ -104,9 +105,9 @@ console.log("---- replaceAll ----");
 // 해당되는 모든 문자열을 Hi로 변경
 console.log(str3.replaceAll("Hello", "Hi"));
 
-console.log("---- toLowerCase, toUpperCase ----");
-
 let str4 = "I want to go home!";
+
+console.log("---- toLowerCase, toUpperCase ----");
 
 console.log(str4.toLowerCase());
 console.log(str4.toUpperCase());
