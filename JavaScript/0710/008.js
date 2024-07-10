@@ -2,7 +2,7 @@
 
 console.log("--- 문자열 타입 ---");
 console.log("1. String()");
-console.log(typeof String(23)); // "23"
+console.log(typeof String(23)); // string
 console.log(String(NaN)); // "NaN"
 console.log(String(true)); // "true"
 console.log(String(null)); // "null"

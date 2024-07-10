@@ -16,16 +16,16 @@ const b = 23;
 console.log(a ?? b); // 23
 console.log(b ?? a); // 23
 
-let name = window.prompt("이름을 입력해주세요");
-name = name ?? "사용자";
-console.log("이름: ", name);
+// let name = window.prompt("이름을 입력해주세요");
+// name = name ?? "사용자";
+// console.log("이름: ", name);
 
-const user = {
-  name: "경현",
-  address: {
-    city: "jeju",
-  },
-};
-console.log(user.number); // undefined
-// console.log(user.number.location);
-console.log(user.number && user.number.location);
+// const user = {
+//   name: "경현",
+//   address: {
+//     city: "jeju",
+//   },
+// };
+// console.log(user.number); // undefined
+// // console.log(user.number.location);
+// console.log(user.number && user.number.location);

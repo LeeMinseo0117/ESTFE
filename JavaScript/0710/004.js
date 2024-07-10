@@ -53,10 +53,12 @@ console.log(+undefined); // NaN
 console.log("--- 다른 형 비교 ---");
 console.log("" == false); //true
 console.log("Hello" == true); // false
-console.log("Hello" == NaN);
+console.log("Hello" == NaN); // false
 
 console.log("isNaN", isNaN("Hello"));
+// true
 console.log("Number.isNaN", Number.isNaN("Hello"));
+// false
 
 console.log(null == undefined);
 // null == null , null == undefined, undefined == undefined
@@ -68,13 +70,13 @@ const obj2 = { a: "1", b: "2" };
 const obj3 = obj1;
 
 console.log(obj1 == obj2); // false
-console.log(obj1 == obj3);
+console.log(obj1 == obj3); // true
 
 console.log([] == []); // false
 
 console.log("--- 객체 vs 원시 타입 ---");
 // 객체를 원시 타입에 맞춰서 변환
-console.log([1, 2] == "1,2");
+console.log([1, 2] == "1,2"); // true
 console.log([] == 0); // true
 
 // 일치(===) / 불일치(!==)

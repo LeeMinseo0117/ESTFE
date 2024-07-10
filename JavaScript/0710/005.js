@@ -50,6 +50,9 @@ console.log(!true);
 console.log(!false);
 
 // 논리부정을 2번 사용해서 boolean 타입으로 변환할 수 있다.
+console.log(!!23);
+console.log(!!"");
+
 console.log(!!!23);
 console.log(!23);
 console.log(!!!"");
