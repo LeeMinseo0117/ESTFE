@@ -1,5 +1,8 @@
 // 배열의 요소를 추가하거나 삭제
 const arr = [10, 20, 30];
+arr[0] = 4;
+arr[2] = 40;
+console.log(arr);
 
 // push & pop
 console.log("--- push & pop ---");
