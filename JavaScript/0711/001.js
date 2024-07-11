@@ -10,6 +10,24 @@ switch (name) {
     console.log("미밈입니다");
 }
 
+switch (new Date().getDay()) {
+  case 1:
+    console.log("워어어어얼");
+  case 2:
+    console.log("화아아아");
+  case 3:
+    console.log("수우우");
+  case 4:
+    console.log("모옥");
+  case 5:
+    console.log("금");
+  case 6:
+  case 0:
+    console.log("퇼");
+  default:
+    console.log("무슨 요일인지 모르겠습니다.");
+}
+
 const today = new Date();
 console.log("오늘은 : ", today.getDay());
 switch (today.getDay()) {

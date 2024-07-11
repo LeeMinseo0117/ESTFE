@@ -23,3 +23,20 @@ function sumNumb(a, b) {
 }
 console.log(sumNumb(10, 20));
 console.log(sumNumb("hello", 2));
+
+function add(a, b) {
+  return a + b;
+  console.log(`${a} + ${b} = ${a + b}`);
+}
+
+function printAdd(a, b) {
+  console.log(`${a} + ${b} = ${a + b}`);
+}
+
+console.log("---add---");
+let result = add(3, 4);
+console.log(`result: ${result}`); // 7
+
+console.log("---printAdd---");
+let result2 = printAdd(3, 4);
+console.log(`result: ${result2}`); // undefined
