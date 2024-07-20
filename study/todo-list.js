@@ -9,6 +9,14 @@ $todoPlusButton.addEventListener("click", (event) => {
   createTodo();
 });
 
+function enterKey() {
+  if (window.event.keyCode == 13 && $todoInput.value !== "") {
+    createTodo();
+  } else {
+    alert("항목을 작성해주세요");
+  }
+}
+
 // 내용 추가
 function createTodo() {
   const $listLi = document.createElement("li");
