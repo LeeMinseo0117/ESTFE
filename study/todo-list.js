@@ -31,4 +31,7 @@ function createTodo() {
   $todoInput.value = null;
 
   // 삭제 버튼 클릭시
+  $listButton.addEventListener("click", (event) => {
+    $todoList.removeChild($listLi);
+  });
 }
