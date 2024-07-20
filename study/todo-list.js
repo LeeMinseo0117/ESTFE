@@ -15,6 +15,7 @@ function createTodo() {
   const $listSpan = document.createElement("span");
   const $listButton = document.createElement("button");
   const $listDel = document.createTextNode("삭제");
+
   // li 안에 span, button 추가
   $listLi.appendChild($listSpan);
   $listLi.appendChild($listButton);
