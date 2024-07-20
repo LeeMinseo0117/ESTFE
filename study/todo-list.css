@@ -5,15 +5,8 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "Ownglyph_UNZ-Rg";
-  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2406-1@1.0/Ownglyph_UNZ-Rg.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
 * {
-  font-family: "Ownglyph_UNZ-Rg";
+  text-align: center;
 }
 
 .todoContainer {
@@ -25,9 +18,17 @@
 }
 .todoTitle {
   font-family: "Cafe24Meongi-W-v1.0";
-  font-size: 40px;
+  font-size: 80px;
 }
-.todoForm {
-  width: 200px;
-  text-align: center;
+.todoInput {
+  text-align: left;
+  width: 250px;
+  padding: 10px;
+}
+.todoPlusButton {
+  padding: 10px;
+}
+.todoList {
+  width: 250px;
+  margin-top: 10px;
 }

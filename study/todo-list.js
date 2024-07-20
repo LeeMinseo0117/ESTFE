@@ -20,6 +20,9 @@ function createTodo() {
   $listLi.appendChild($listSpan);
   $listLi.appendChild($listButton);
   $listButton.appendChild($listDel);
+
+  $listLi.style.textAlign = "left";
+
   // input에 내용 작성 후 추가 클릭시 li 생성 후 출력
   if ($todoInput.value) {
     $listSpan.textContent = $todoInput.value;
