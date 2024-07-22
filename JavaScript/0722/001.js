@@ -11,6 +11,26 @@ class Robot {
     console.log(`my name is ${this.name}`);
   }
 }
-const robot = new Robot("mimim");
+const robot = new Robot("민서");
 console.log(robot);
 robot.sayName();
+
+console.log(robot.name);
+
+robot.name = "mimim";
+console.log(robot.name);
+
+class BabyRobot extends Robot {
+  constructor(name) {
+    super(name);
+    this.ownName = "미밈";
+  }
+  sayBabyName() {
+    // 또한 상속을 받게되면 부모 클래스의 메소드를 사용할 수 있게 됩니다. 때문에 this로 접근 할 수 있습니다.
+    this.sayName();
+    console.log("Succeeding you, mother!");
+  }
+}
+const babyRobot = new BabyRobot("일남");
+console.log(babyRobot);
+babyRobot.sayBabyName();
