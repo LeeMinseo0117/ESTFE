@@ -9,6 +9,7 @@ $todoPlusButton.addEventListener("click", (event) => {
   createTodo();
 });
 
+// 엔터키 클릭시 추가 -> 작동 안됨
 function enterKey() {
   if (window.event.keyCode == 13 && $todoInput.value !== "") {
     createTodo();
@@ -17,7 +18,7 @@ function enterKey() {
   }
 }
 
-// 내용 추가
+// 내용 추가 및 삭제 함수
 function createTodo() {
   const $listLi = document.createElement("li");
   const $listSpan = document.createElement("span");
