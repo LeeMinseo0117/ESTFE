@@ -21,25 +21,6 @@
 //     // console.log(err);
 //   });
 
-// const a = new Promise((resolve, reject) => {
-//   const requestObj = new XMLHttpRequest();
-//   requestObj.open("GET", "https://test.api.weniv.co.kr/mall");
-//   requestObj.onreadystatechange = () => {
-//     if (requestObj.readyState === 4 && requestObj.status === 200) {
-//       const h = requestObj.response;
-//       resolve(h);
-//     }
-//   };
-//   requestObj.send();
-// });
-// a.then((result) => {
-//   const json = JSON.parse(result);
-//   console.log(json);
-//   json.forEach((data) => {
-//     document.write(data.productName);
-//   });
-// });
-
 // 프로미스
 const usePromise = new Promise((resolve, reject) => {
   const requestObj = new XMLHttpRequest();
@@ -80,4 +61,23 @@ usePromise
   })
   .catch((error) => {
     console.log(error);
+  });
+
+fetch(
+  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json"
+)
+  .then((response) => {
+    // response.ok 는 응답이 성공적(200-299)일 경우 true, 아니면 false를 반환합니다.
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+    return data;
+  })
+  // fetch 함수는 네트워크 오류가 발생하면 reject 상태의 프로미스를 반환합니다.
+  .catch((error) => {
+    console.error(error);
   });
