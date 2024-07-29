@@ -615,8 +615,7 @@ solution([175, 180, 165, 170, 185], 175);
   .reduce(
     (a, c) => a + parseInt(c) * 2,
     0
-  )
-  (
+  )(
     // 비교
     123
   )
@@ -840,7 +839,6 @@ while (current) {
 
 - object로 linked list를 구현합니다.
 - 이번에는 search를 합니다. 40이라는 값의 인덱스를 반복문 안에서 찾아야 합니다.(https://visualgo.net/en/list?slide=1)
-- 구현 시간은 8분을 드렸습니다. 가려서 라운지에 올려주세요.
 
 ```js
 let linkedList = { head: null };
