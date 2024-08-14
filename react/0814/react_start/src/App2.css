@@ -1,0 +1,18 @@
+.list-area {
+  list-style: none;
+  padding: 0;
+}
+
+.list-area li {
+  border: 1px solid black;
+}
+
+.list-area li + li {
+  /* 바로 뒤에 있는 형제 선택 */
+  border-top: 0;
+}
+
+.list-area li.active {
+  color: white;
+  background-color: royalblue;
+}
