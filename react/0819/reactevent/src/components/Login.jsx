@@ -1,19 +1,26 @@
-import { useState } from "react";
+import React from "react";
 
-function Login() {
+export default function Login({ infoUser, setLogin }) {
   const [id, setId] = useState("");
   const [pw, setPw] = useState("");
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
     console.log("submit");
-    if (id === "") {
-      alert("아이디를 입력하지 않았습니다.");
+
+    if (!id) {
+      alert("아이디를 입력하지 않았습니다!");
     }
-    if (pw === "") {
-      alert("패스워드를 입력하지 않았습니다.");
+
+    if (!pw) {
+      alert("비밀번호를 입력하지 않았습니다!");
     }
-    alert(`id : ${id}, pw : ${pw}`);
+
+    // 사용자 정보와 입력 정보가 일치하는지 확인
+    if (id === infoUser.idUser && Number(pw) === infoUser.pwUser) {
+      // 로그인 성공
+      setLogin(true);
+    }
   };
 
   const handleLoginInput = (e) => {
@@ -29,16 +36,17 @@ function Login() {
   return (
     <form onSubmit={handleLoginSubmit}>
       <label>
-        아이디 : <input type="text" onChange={handleLoginInput} />
+        아이디 :
+        <input type="text" onChange={handleLoginInput} value={id} />
       </label>
       <br />
       <label>
         비밀번호 :
-        <input type="password" onChange={handlePasswordInput} />
+        <input type="password" onChange={handlePasswordInput} value={pw} />
       </label>
       <button type="submit">로그인</button>
     </form>
   );
-}
 
-export default Login;
+  return <div></div>;
+}
