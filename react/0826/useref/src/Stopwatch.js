@@ -17,6 +17,7 @@ export default function StopwatchFixed() {
     intervalId.current = setInterval(() => {
       // 흘러간 시간을 계산합니다.
       setSecondsPassed(Date.now() - startTime.current);
+      console.log(secondsPassed);
     }, 10);
   }
 
