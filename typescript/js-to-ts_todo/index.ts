@@ -14,23 +14,35 @@ interface TodoData {
 //   },
 // ];
 
-const addTodoData = (todoText: string): TodoData[] => {
-  const newTodoId = todoDatas[todoDatas.length - 1].id + 1;
-  const newTodo: TodoData = {
-    id: newTodoId,
-    todo: todoText,
-  };
-  todoDatas.push(newTodo);
+const getTodoData = async (): Promise<TodoData[]> => {
+  const res = await fetch("http://localhost:3000/todos");
+  const todoDatas: TodoData[] = await res.json();
   return todoDatas;
 };
 
-const addTodoList = (): void => {
+const addTodoData = async (todoText: string): Promise<TodoData[]> => {
+  const newTodo: Partial<TodoData> = {
+    todo: todoText,
+  };
+  const res = await fetch("http://localhost:3000/todos", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newTodo),
+  });
+  const newTodoData = await res.json();
+  return newTodoData;
+};
+
+const addTodoList = async () => {
   const $todoInput = document.querySelector("#todo-input");
   if ($todoInput !== null && $todoInput instanceof HTMLInputElement) {
     const todoText = $todoInput.value;
     $todoInput.value = "";
-    const todoDatas = addTodoData(todoText);
-    todoListRender(todoDatas);
+    await addTodoData(todoText);
+    const newTodoDatas = await getTodoData();
+    todoListRender(newTodoDatas);
   } else {
     alert("페이지에 이상이 있습니다.");
   }
@@ -58,4 +70,8 @@ const todoListRender = (todoDatas: TodoData[]): void => {
   });
 };
 
-todoListRender(todoDatas);
+const init = async () => {
+  const todoDatas = await getTodoData();
+  todoListRender(todoDatas);
+};
+init();
