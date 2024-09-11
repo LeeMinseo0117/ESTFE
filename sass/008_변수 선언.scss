@@ -1,0 +1,13 @@
+$one: #000000;
+$two: #999999;
+$three: #ffffff;
+// 한글 변수도 사용 가능하지만 권장하지는 않음
+.four {
+  color: $one;
+}
+.five {
+  color: $two;
+}
+.six {
+  color: $three;
+}
