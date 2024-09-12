@@ -2,7 +2,27 @@ import logo from "./logo.svg";
 import "./App.css";
 import { useEffect, useState } from "react";
 
-function Todo() {
+const TodoView = ({ todoList, handleInput, todoText, handleButton }) => {
+  return (
+    <div>
+      <h1>멋진 투두</h1>
+      <ul>
+        {todoList.map((todoItem) => (
+          <li key={todoItem.id}>
+            <p>{todoItem.todo}</p>
+          </li>
+        ))}
+        {/* <li>{todoList[0].todo}</li> */}
+        {/* onChange: React에서 폼 요소의 값이 변경될 때 발생하는 이벤트를 처리하는 데 사용되는 prop */}
+        <input type="text" value={todoText} onChange={handleInput} />
+        <button type="button" onClick={handleButton}>
+          투두추가
+        </button>
+      </ul>
+    </div>
+  );
+};
+const Todo = () => {
   // 투두 리스트 상태 관리하는 useState(객체상태) 추가
   // todoList 변수와 todoList 변수의 상태를 변경할 수 있는 setTodoList 함수
   const [todoList, setTodoList] = useState([
@@ -45,26 +65,10 @@ function Todo() {
     });
   };
 
-  return (
-    <div>
-      <h1>멋진 투두</h1>
-      <ul>
-        {/*  */}
-        {todoList.map((todoItem) => (
-          <li key={todoItem.id}>
-            <p>{todoItem.todo}</p>
-          </li>
-        ))}
-        {/* <li>{todoList[0].todo}</li> */}
-        {/* onChange: React에서 폼 요소의 값이 변경될 때 발생하는 이벤트를 처리하는 데 사용되는 prop */}
-        <input type="text" value={todoText} onChange={handleInput} />
-        <button type="button" onClick={handleButton}>
-          투두추가
-        </button>
-      </ul>
-    </div>
-  );
-}
+  const props = { todoList, handleInput, todoText, handleButton };
+
+  return <TodoView {...props} />;
+};
 function App() {
   return (
     <div className="App">
