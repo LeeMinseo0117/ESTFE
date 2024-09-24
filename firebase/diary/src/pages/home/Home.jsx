@@ -1,19 +1,18 @@
-import React from 'react';
-import DiaryForm from './DiaryForm';
-import styles from './Home.module.css';
+import React from "react";
+import DiaryForm from "./DiaryForm";
+import styles from "./Home.module.css";
 
 export default function Home() {
-    return (
-        <div className="container">
-            <main className={styles["diary-main"]}>
-                <h2 className={styles.heart}>2023.02.27의 비밀일기</h2>
-                <DiaryForm />
-            </main>
-            <section>
-                <h2 className="a11y-hidden">일기 목록</h2>
-                <ul>
-
-                    {/* <li>
+  return (
+    <div className="container">
+      <main className={styles["diary-main"]}>
+        <h2 className={styles.heart}>2023.02.27의 비밀일기</h2>
+        <DiaryForm />
+      </main>
+      <section>
+        <h2 className="a11y-hidden">일기 목록</h2>
+        <ul>
+          {/* <li>
                         <article className="diary-article">
                             <h3 className="article-title">이는 청춘의 것은 그들의 운다.</h3>
                             <time className="article-time" datetime="2023-03-15">2023.02.24.THU</time>
@@ -35,9 +34,8 @@ export default function Home() {
                             </div>
                         </article>
                     </li> */}
-
-                </ul>
-            </section>
-        </div>
-    )
+        </ul>
+      </section>
+    </div>
+  );
 }
